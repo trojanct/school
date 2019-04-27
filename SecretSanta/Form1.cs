@@ -47,5 +47,10 @@ namespace SecretSanta
             client.Send(mail);
 
         }
+
+        private void Namebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

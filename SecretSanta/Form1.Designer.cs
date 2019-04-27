@@ -33,10 +33,12 @@
             this.addemail = new System.Windows.Forms.Button();
             this.santatab = new System.Windows.Forms.TabControl();
             this.santatab1 = new System.Windows.Forms.TabPage();
-            this.santatab2 = new System.Windows.Forms.TabPage();
             this.Emailsend = new System.Windows.Forms.Button();
+            this.santatab2 = new System.Windows.Forms.TabPage();
+            this.Namebox = new System.Windows.Forms.TextBox();
             this.santatab.SuspendLayout();
             this.santatab1.SuspendLayout();
+            this.santatab2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Emails
@@ -89,16 +91,6 @@
             this.santatab1.Text = "Santa";
             this.santatab1.UseVisualStyleBackColor = true;
             // 
-            // santatab2
-            // 
-            this.santatab2.Location = new System.Drawing.Point(4, 22);
-            this.santatab2.Name = "santatab2";
-            this.santatab2.Padding = new System.Windows.Forms.Padding(3);
-            this.santatab2.Size = new System.Drawing.Size(556, 374);
-            this.santatab2.TabIndex = 1;
-            this.santatab2.Text = "christmas";
-            this.santatab2.UseVisualStyleBackColor = true;
-            // 
             // Emailsend
             // 
             this.Emailsend.Location = new System.Drawing.Point(354, 250);
@@ -108,6 +100,25 @@
             this.Emailsend.Text = "send email";
             this.Emailsend.UseVisualStyleBackColor = true;
             this.Emailsend.Click += new System.EventHandler(this.Emailsend_Click);
+            // 
+            // santatab2
+            // 
+            this.santatab2.Controls.Add(this.Namebox);
+            this.santatab2.Location = new System.Drawing.Point(4, 22);
+            this.santatab2.Name = "santatab2";
+            this.santatab2.Padding = new System.Windows.Forms.Padding(3);
+            this.santatab2.Size = new System.Drawing.Size(556, 374);
+            this.santatab2.TabIndex = 1;
+            this.santatab2.Text = "christmas";
+            this.santatab2.UseVisualStyleBackColor = true;
+            // 
+            // Namebox
+            // 
+            this.Namebox.Location = new System.Drawing.Point(14, 49);
+            this.Namebox.Name = "Namebox";
+            this.Namebox.Size = new System.Drawing.Size(152, 20);
+            this.Namebox.TabIndex = 0;
+            this.Namebox.TextChanged += new System.EventHandler(this.Namebox_TextChanged);
             // 
             // Santa
             // 
@@ -119,6 +130,8 @@
             this.Text = "Secret Santa";
             this.santatab.ResumeLayout(false);
             this.santatab1.ResumeLayout(false);
+            this.santatab2.ResumeLayout(false);
+            this.santatab2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -132,6 +145,7 @@
         private System.Windows.Forms.TabPage santatab1;
         private System.Windows.Forms.TabPage santatab2;
         private System.Windows.Forms.Button Emailsend;
+        private System.Windows.Forms.TextBox Namebox;
     }
 }
 
