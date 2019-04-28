@@ -38,6 +38,16 @@
             this.santatab2 = new System.Windows.Forms.TabPage();
             this.Namebox = new System.Windows.Forms.TextBox();
             this.details = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.SanteeBox = new System.Windows.Forms.TextBox();
+            this.LocationBox = new System.Windows.Forms.TextBox();
+            this.FileBox = new System.Windows.Forms.TextBox();
+            this.PriceBox = new System.Windows.Forms.TextBox();
+            this.EmailBox = new System.Windows.Forms.TextBox();
+            this.CardBox = new System.Windows.Forms.TextBox();
             this.santatab.SuspendLayout();
             this.santatab1.SuspendLayout();
             this.santatab2.SuspendLayout();
@@ -54,12 +64,13 @@
             // 
             // addemail
             // 
-            this.addemail.Location = new System.Drawing.Point(440, 267);
+            this.addemail.Location = new System.Drawing.Point(461, 270);
             this.addemail.Name = "addemail";
             this.addemail.Size = new System.Drawing.Size(75, 23);
             this.addemail.TabIndex = 2;
             this.addemail.Text = "add Email";
             this.addemail.UseVisualStyleBackColor = true;
+            this.addemail.Click += new System.EventHandler(this.addemail_Click);
             // 
             // santatab
             // 
@@ -73,6 +84,16 @@
             // 
             // santatab1
             // 
+            this.santatab1.Controls.Add(this.EmailBox);
+            this.santatab1.Controls.Add(this.CardBox);
+            this.santatab1.Controls.Add(this.FileBox);
+            this.santatab1.Controls.Add(this.PriceBox);
+            this.santatab1.Controls.Add(this.LocationBox);
+            this.santatab1.Controls.Add(this.SanteeBox);
+            this.santatab1.Controls.Add(this.label6);
+            this.santatab1.Controls.Add(this.label5);
+            this.santatab1.Controls.Add(this.label4);
+            this.santatab1.Controls.Add(this.label3);
             this.santatab1.Controls.Add(this.label2);
             this.santatab1.Controls.Add(this.label1);
             this.santatab1.Controls.Add(this.Emailsend);
@@ -90,17 +111,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(320, 102);
+            this.label2.Location = new System.Drawing.Point(317, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "location";
+            this.label2.Text = "Location";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(320, 69);
+            this.label1.Location = new System.Drawing.Point(317, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 4;
@@ -137,12 +158,90 @@
             // 
             // details
             // 
-            this.details.Location = new System.Drawing.Point(24, 69);
+            this.details.Location = new System.Drawing.Point(24, 81);
             this.details.Name = "details";
             this.details.Size = new System.Drawing.Size(265, 180);
             this.details.TabIndex = 1;
             this.details.Text = "";
             this.details.TextChanged += new System.EventHandler(this.details_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(317, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Price Limit";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(317, 176);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "List File";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(317, 202);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Gift Cards";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(317, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Santa Email";
+            // 
+            // SanteeBox
+            // 
+            this.SanteeBox.Location = new System.Drawing.Point(387, 89);
+            this.SanteeBox.Name = "SanteeBox";
+            this.SanteeBox.Size = new System.Drawing.Size(149, 20);
+            this.SanteeBox.TabIndex = 10;
+            // 
+            // LocationBox
+            // 
+            this.LocationBox.Location = new System.Drawing.Point(387, 118);
+            this.LocationBox.Name = "LocationBox";
+            this.LocationBox.Size = new System.Drawing.Size(149, 20);
+            this.LocationBox.TabIndex = 11;
+            // 
+            // FileBox
+            // 
+            this.FileBox.Location = new System.Drawing.Point(387, 173);
+            this.FileBox.Name = "FileBox";
+            this.FileBox.Size = new System.Drawing.Size(149, 20);
+            this.FileBox.TabIndex = 13;
+            // 
+            // PriceBox
+            // 
+            this.PriceBox.Location = new System.Drawing.Point(387, 144);
+            this.PriceBox.Name = "PriceBox";
+            this.PriceBox.Size = new System.Drawing.Size(149, 20);
+            this.PriceBox.TabIndex = 12;
+            // 
+            // EmailBox
+            // 
+            this.EmailBox.Location = new System.Drawing.Point(387, 228);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(149, 20);
+            this.EmailBox.TabIndex = 15;
+            // 
+            // CardBox
+            // 
+            this.CardBox.Location = new System.Drawing.Point(387, 199);
+            this.CardBox.Name = "CardBox";
+            this.CardBox.Size = new System.Drawing.Size(149, 20);
+            this.CardBox.TabIndex = 14;
             // 
             // Santa
             // 
@@ -174,6 +273,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox details;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox EmailBox;
+        private System.Windows.Forms.TextBox CardBox;
+        private System.Windows.Forms.TextBox FileBox;
+        private System.Windows.Forms.TextBox PriceBox;
+        private System.Windows.Forms.TextBox LocationBox;
+        private System.Windows.Forms.TextBox SanteeBox;
+        private System.Windows.Forms.Label label6;
     }
 }
 

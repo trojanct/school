@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
+using System.IO;
 using System.Web;
 using System.Net.Mail;
 using System.Windows.Forms;
@@ -125,8 +126,10 @@ namespace SecretSanta
         void Finddata(List<SantaGift>Wishname, string name)
         {
             string line;
+            int linenumber = 0;
             string address = "C:\\Users\\BlooddSkullKing\\source\\repos\\school\\SecretSanta\\wishlists\\";
-    
+            details.Clear();
+
             System.IO.StreamReader Wishfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt");
             while ((line = Wishfile.ReadLine()) != null)
             {
@@ -141,19 +144,42 @@ namespace SecretSanta
                 });
 
             }
-
+            
             for (int d = 0; d < Wishname.Count; d++)
             {
                 if (Wishname[d].name == name)
                 {
                     address = address + Wishname[d].Listfile;
+                    Fillinfo(Wishname, d);
                     System.IO.StreamReader listfile = new System.IO.StreamReader(address);
+
+           
                     while ((line = listfile.ReadLine()) != null)
                     {
-                        details.AppendText(Environment.NewLine + line);
+                        if (linenumber == 0)
+                        {
+                            details.Text = line;
+                            linenumber = 1;
+                        }
+                        else
+                        {
+                            details.AppendText(Environment.NewLine + line);
+                        }
                     }
+                    listfile.Close();
                 }
             }
+            Wishfile.Close();
+        }
+        void Fillinfo(List<SantaGift> info, int temp)
+        {
+            SanteeBox.Text = info[temp].name;
+            LocationBox.Text = info[temp].location;
+            PriceBox.Text = info[temp].Pricelimit;
+            FileBox.Text = info[temp].Listfile;
+            CardBox.Text = info[temp].Giftcards;
+            EmailBox.Text = info[temp].Santaemail;
+
         }
         void Fillselection(List<SantaGift>Names)
         {
@@ -215,6 +241,21 @@ namespace SecretSanta
             //MessageBox.Show(Santaemail[0].Secretsantee, Santaemail[2].Secretsantee);
             //MessageBox.Show(limit.ToString());
             Fillselection(Wishlist);
+        }
+
+        private void addemail_Click(object sender, EventArgs e)
+        {
+            
+            //using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\santapartic.txt"))
+            using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt"))
+            {
+                w.WriteLine(SanteeBox.Text);
+                w.WriteLine(LocationBox.Text);
+                w.WriteLine(PriceBox.Text);
+                w.WriteLine(FileBox.Text);
+                w.WriteLine(CardBox.Text);
+                w.WriteLine(EmailBox.Text);
+            }
         }
     }
 }

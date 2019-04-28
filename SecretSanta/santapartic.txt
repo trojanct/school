@@ -1,0 +1,49 @@
+test
+tss
+test
+testt
+test
+test
+Cody
+Cody
+Rapid
+75.00
+codylist.txt
+gamestop,buffalowildwings
+Cody.Ortega@trojans.dsu.edu
+Santa
+North Pole
+75.00
+santalist.txt
+toys r us
+secretsantabos@gmail.com
+stapert
+Dupree
+75.00
+stapertlist.txt
+ranchsuppliesrc
+secretsantabos@gmail.com
+mrs claus
+north pole
+75.00
+clauselist.txt
+bed bath beyond
+secretsantabos@gmail.com
+Cody
+Rapid
+75.00
+codylist.txt
+gamestop,buffalowildwings
+Cody.Ortega@trojans.dsu.edu
+Santa
+North Pole
+75.00
+santalist.txt
+toys r us
+secretsantabos@gmail.com
+stapert
+Dupree
+75.00
+stapertlist.txt
+ranchsuppliesrc
+secretsantabos@gmail.com
