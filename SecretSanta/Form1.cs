@@ -72,21 +72,21 @@ namespace SecretSanta
 
         public class SantaEmail
         {
-            public int number;
-            public string Secretemail;
-            public string Name;
-            public string Secretsantee;
+            public int number { get; set; }
+            public string Secretemail { get; set; }
+            public string Name { get; set; }
+            public string Secretsantee{get; set; }
         }
         public class SantaGift
         {
-            public string name;
-            public string location;
-            public string Pricelimit;
-            public string Listfile;
-            public string Giftcards;
-            public string Santaemail;
+            public string name { get; set; }
+            public string location { get; set; }
+            public string Pricelimit { get; set; }
+            public string Listfile { get; set; }
+            public string Giftcards { get; set; }
+            public string Santaemail { get; set; }
 
-     
+
         }
         public class Giftandprice
         {
