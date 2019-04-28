@@ -48,6 +48,7 @@
             this.PriceBox = new System.Windows.Forms.TextBox();
             this.EmailBox = new System.Windows.Forms.TextBox();
             this.CardBox = new System.Windows.Forms.TextBox();
+            this.Secretb = new System.Windows.Forms.Button();
             this.santatab.SuspendLayout();
             this.santatab1.SuspendLayout();
             this.santatab2.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             // santatab1
             // 
+            this.santatab1.Controls.Add(this.Secretb);
             this.santatab1.Controls.Add(this.EmailBox);
             this.santatab1.Controls.Add(this.CardBox);
             this.santatab1.Controls.Add(this.FileBox);
@@ -129,7 +131,7 @@
             // 
             // Emailsend
             // 
-            this.Emailsend.Location = new System.Drawing.Point(440, 322);
+            this.Emailsend.Location = new System.Drawing.Point(461, 299);
             this.Emailsend.Name = "Emailsend";
             this.Emailsend.Size = new System.Drawing.Size(75, 23);
             this.Emailsend.TabIndex = 3;
@@ -243,6 +245,17 @@
             this.CardBox.Size = new System.Drawing.Size(149, 20);
             this.CardBox.TabIndex = 14;
             // 
+            // Secretb
+            // 
+            this.Secretb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Secretb.Location = new System.Drawing.Point(24, 299);
+            this.Secretb.Name = "Secretb";
+            this.Secretb.Size = new System.Drawing.Size(265, 53);
+            this.Secretb.TabIndex = 16;
+            this.Secretb.Text = "Secret Santa Button";
+            this.Secretb.UseVisualStyleBackColor = true;
+            this.Secretb.Click += new System.EventHandler(this.Secretb_Click);
+            // 
             // Santa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +296,7 @@
         private System.Windows.Forms.TextBox LocationBox;
         private System.Windows.Forms.TextBox SanteeBox;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button Secretb;
     }
 }
 

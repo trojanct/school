@@ -72,10 +72,11 @@ namespace SecretSanta
 
         public class SantaEmail
         {
+            public int number;
             public string Secretemail;
             public string Name;
             public string Secretsantee;
-}
+        }
         public class SantaGift
         {
             public string name;
@@ -190,6 +191,74 @@ namespace SecretSanta
                 Emailsname.Items.Add(Names[n].name);
             }
         }
+        void Updatesecretsantalist(List<SantaGift> names)
+        {
+            List<SantaEmail> Secretlist = new List<SantaEmail>();
+            Random Santeenum = new Random();
+            int[] randomcheck = new int[names.Count];
+            int number = 0;
+
+           
+            for (int s = 0; s < names.Count; s++)
+            {
+                Secretlist.Add(new SantaEmail()
+                {
+
+                    Name = names[s].name,
+                    Secretemail = names[s].Santaemail,
+                    number = s
+
+
+                });
+                    
+                 
+            
+               
+                
+            }
+            
+            for (int q = 0; q < Secretlist.Count; q++)
+            {
+                number = Santeenum.Next(Secretlist.Count);
+                while (Secretlist[q].number == number || randomcheck[number] == 1 )
+                {
+                    number = Santeenum.Next(Secretlist.Count);
+                }
+                randomcheck[number] = 1;
+                Secretlist[q].Secretsantee = Secretlist[number].Name;
+            }
+
+            printlist(Secretlist);
+            Emaillist(Secretlist);
+
+        }
+        void printlist(List<SantaEmail> Plist)
+        {
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\secretlist.txt")) 
+            {
+                
+                foreach (SantaEmail person in Plist )
+                {
+                    file.WriteLine(person.Name);
+                    file.WriteLine(person.number);
+                    file.WriteLine(person.Secretemail);
+                    file.WriteLine(person.Secretsantee);
+                }
+            }
+
+        }
+        void Emaillist(List<SantaEmail> Elist)
+        {
+            for (int e = 0; e < Elist.Count; e++)
+            {
+                MailMessage mail = new MailMessage("secretsantabos@gmail.com", Elist[e].Secretemail, "Secret Santa Gift Receiver", Elist[e].Secretsantee);
+                SmtpClient client = new SmtpClient("smtp.gmail.com");
+                client.Port = 587;
+                client.Credentials = new System.Net.NetworkCredential("secretsantabos@gmail.com", "secretsanta123");
+                client.EnableSsl = true;
+                client.Send(mail);
+            }
+        }
         void Filewishopen(string address, List<SantaGift>Santee,int temp)
         {
             string Wishlistaddress = address + Santee[temp].Listfile;
@@ -234,6 +303,8 @@ namespace SecretSanta
                 });
 
             }
+           
+            
             Wishfile.Close();
             
             
@@ -257,5 +328,30 @@ namespace SecretSanta
                 w.WriteLine(EmailBox.Text);
             }
         }
+
+        private void Secretb_Click(object sender, EventArgs e)
+        {
+            List<SantaGift> Wishlist = new List<SantaGift>();
+            string line;
+            System.IO.StreamReader Wishfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt");
+            while ((line = Wishfile.ReadLine()) != null)
+            {
+           
+                Wishlist.Add(new SantaGift()
+                {
+                    name = line,
+                    location = Wishfile.ReadLine(),
+                    Pricelimit = Wishfile.ReadLine(),
+                    Listfile = Wishfile.ReadLine(),
+                    Giftcards = Wishfile.ReadLine(),
+                    Santaemail = Wishfile.ReadLine()
+                });
+
+            }
+            Wishfile.Close();
+            Updatesecretsantalist(Wishlist);
+            
+        }
+        
     }
 }
