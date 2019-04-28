@@ -17,6 +17,45 @@ namespace SecretSanta
         public Santa()
         {
             InitializeComponent();
+            string line;
+            List<SantaEmail> Santaemail = new List<SantaEmail>();
+            SantaEmail Emails = new SantaEmail();
+
+            System.IO.StreamReader Santafile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\secretsanta.txt");
+            while ((line = Santafile.ReadLine()) != null)
+            {
+                Santaemail.Add(new SantaEmail()
+                {
+                    Secretemail = line,
+                    Name = line,
+                    Secretsantee = line
+                });
+
+
+            }
+            MessageBox.Show(Santaemail[1].Name);
+
+        }
+
+        public void Main()
+        {
+            string line;
+            List<SantaEmail> Santaemail = new List<SantaEmail>();
+            SantaEmail Emails = new SantaEmail();
+
+            System.IO.StreamReader Santafile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta");
+            while ((line = Santafile.ReadLine()) != null)
+            {
+                Santaemail.Add(new SantaEmail()
+                {
+                    Secretemail = line,
+                    Name = line,
+                    Secretsantee = line
+                });
+
+              
+            }
+            MessageBox.Show("test");
         }
 
         private void Emails_SelectedIndexChanged(object sender, EventArgs e)
@@ -26,14 +65,23 @@ namespace SecretSanta
 
         public class SantaEmail
         {
-
-        }
+            public string Secretemail;
+            public string Name;
+            public string Secretsantee;
+}
         public class SantaGift
         {
+            private string name;
+            private float Pricelimit;
+            List<string> Wishlist = new List<string>();
+            public string Giftcards;
+            private string Santaemail;
 
+     
         }
-        public class BBGift
+        public class Nonsantagift
         {
+            List<string> Giftideas = new List<string>();
 
         }
 
@@ -49,6 +97,16 @@ namespace SecretSanta
         }
 
         private void Namebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void details_TextChanged(object sender, EventArgs e)
         {
 
         }

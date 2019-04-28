@@ -36,6 +36,8 @@
             this.Emailsend = new System.Windows.Forms.Button();
             this.santatab2 = new System.Windows.Forms.TabPage();
             this.Namebox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.santatab.SuspendLayout();
             this.santatab1.SuspendLayout();
             this.santatab2.SuspendLayout();
@@ -44,7 +46,7 @@
             // Emails
             // 
             this.Emails.FormattingEnabled = true;
-            this.Emails.Location = new System.Drawing.Point(274, 27);
+            this.Emails.Location = new System.Drawing.Point(24, 25);
             this.Emails.Name = "Emails";
             this.Emails.Size = new System.Drawing.Size(265, 21);
             this.Emails.TabIndex = 0;
@@ -52,15 +54,16 @@
             // 
             // details
             // 
-            this.details.Location = new System.Drawing.Point(3, 27);
+            this.details.Location = new System.Drawing.Point(24, 69);
             this.details.Name = "details";
             this.details.Size = new System.Drawing.Size(265, 180);
             this.details.TabIndex = 1;
             this.details.Text = "";
+            this.details.TextChanged += new System.EventHandler(this.details_TextChanged);
             // 
             // addemail
             // 
-            this.addemail.Location = new System.Drawing.Point(193, 250);
+            this.addemail.Location = new System.Drawing.Point(440, 267);
             this.addemail.Name = "addemail";
             this.addemail.Size = new System.Drawing.Size(75, 23);
             this.addemail.TabIndex = 2;
@@ -79,6 +82,8 @@
             // 
             // santatab1
             // 
+            this.santatab1.Controls.Add(this.label2);
+            this.santatab1.Controls.Add(this.label1);
             this.santatab1.Controls.Add(this.Emailsend);
             this.santatab1.Controls.Add(this.details);
             this.santatab1.Controls.Add(this.addemail);
@@ -93,7 +98,7 @@
             // 
             // Emailsend
             // 
-            this.Emailsend.Location = new System.Drawing.Point(354, 250);
+            this.Emailsend.Location = new System.Drawing.Point(440, 322);
             this.Emailsend.Name = "Emailsend";
             this.Emailsend.Size = new System.Drawing.Size(75, 23);
             this.Emailsend.TabIndex = 3;
@@ -120,6 +125,25 @@
             this.Namebox.TabIndex = 0;
             this.Namebox.TextChanged += new System.EventHandler(this.Namebox_TextChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(320, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(320, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "location";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Santa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,6 +154,7 @@
             this.Text = "Secret Santa";
             this.santatab.ResumeLayout(false);
             this.santatab1.ResumeLayout(false);
+            this.santatab1.PerformLayout();
             this.santatab2.ResumeLayout(false);
             this.santatab2.PerformLayout();
             this.ResumeLayout(false);
@@ -146,6 +171,8 @@
         private System.Windows.Forms.TabPage santatab2;
         private System.Windows.Forms.Button Emailsend;
         private System.Windows.Forms.TextBox Namebox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
