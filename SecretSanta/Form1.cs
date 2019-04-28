@@ -14,26 +14,29 @@ namespace SecretSanta
 {
     public partial class Santa : Form
     {
+
         public Santa()
         {
             InitializeComponent();
-            string line;
-            List<SantaEmail> Santaemail = new List<SantaEmail>();
-            SantaEmail Emails = new SantaEmail();
-
-            System.IO.StreamReader Santafile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\secretsanta.txt");
-            while ((line = Santafile.ReadLine()) != null)
-            {
-                Santaemail.Add(new SantaEmail()
-                {
-                    Secretemail = line,
-                    Name = line,
-                    Secretsantee = line
-                });
 
 
-            }
-            MessageBox.Show(Santaemail[1].Name);
+            //string line;
+            //List<SantaEmail> Santaemail = new List<SantaEmail>();
+            //SantaEmail Emails = new SantaEmail();
+
+            //System.IO.StreamReader Santafile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\secretsanta.txt");
+            //while ((line = Santafile.ReadLine()) != null)
+            //{
+            //    Santaemail.Add(new SantaEmail()
+            //    {
+            //        Secretemail = line,
+            //        Name = line,
+            //        Secretsantee = line
+            //    });
+
+
+            //}
+            //MessageBox.Show(Santaemail[1].Name);
 
         }
 
@@ -60,6 +63,9 @@ namespace SecretSanta
 
         private void Emails_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string name = Emailsname.Text;
+            List<SantaGift> Wishname = new List<SantaGift>();
+            Finddata(Wishname, name);
 
         }
 
@@ -71,13 +77,19 @@ namespace SecretSanta
 }
         public class SantaGift
         {
-            private string name;
-            private float Pricelimit;
-            List<string> Wishlist = new List<string>();
+            public string name;
+            public string location;
+            public string Pricelimit;
+            public string Listfile;
             public string Giftcards;
-            private string Santaemail;
+            public string Santaemail;
 
      
+        }
+        public class Giftandprice
+        {
+            public string gift;
+            public string price;
         }
         public class Nonsantagift
         {
@@ -109,6 +121,100 @@ namespace SecretSanta
         private void details_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        void Finddata(List<SantaGift>Wishname, string name)
+        {
+            string line;
+            string address = "C:\\Users\\BlooddSkullKing\\source\\repos\\school\\SecretSanta\\wishlists\\";
+    
+            System.IO.StreamReader Wishfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt");
+            while ((line = Wishfile.ReadLine()) != null)
+            {
+                Wishname.Add(new SantaGift()
+                {
+                    name = line,
+                    location = Wishfile.ReadLine(),
+                    Pricelimit = Wishfile.ReadLine(),
+                    Listfile = Wishfile.ReadLine(),
+                    Giftcards = Wishfile.ReadLine(),
+                    Santaemail = Wishfile.ReadLine()
+                });
+
+            }
+
+            for (int d = 0; d < Wishname.Count; d++)
+            {
+                if (Wishname[d].name == name)
+                {
+                    address = address + Wishname[d].Listfile;
+                    System.IO.StreamReader listfile = new System.IO.StreamReader(address);
+                    while ((line = listfile.ReadLine()) != null)
+                    {
+                        details.AppendText(Environment.NewLine + line);
+                    }
+                }
+            }
+        }
+        void Fillselection(List<SantaGift>Names)
+        {
+
+            int limit = Names.Count;
+            for( int n = 0; n < limit; n++)
+            {
+                Emailsname.Items.Add(Names[n].name);
+            }
+        }
+        void Filewishopen(string address, List<SantaGift>Santee,int temp)
+        {
+            string Wishlistaddress = address + Santee[temp].Listfile;
+
+        }
+
+        private void Santa_Load(object sender, EventArgs e)
+        {
+
+
+            string line;
+            List<SantaEmail> Santaemail = new List<SantaEmail>();
+            List<SantaGift> Wishlist = new List<SantaGift>();
+
+            string address = "C:\\Users\\BlooddSkullKing\\source\\repos\\school\\SecretSanta\\wishlists\\";
+            string matt = address;
+            SantaEmail Emails = new SantaEmail();
+
+            System.IO.StreamReader Santafile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\secretsanta.txt");
+            while ((line = Santafile.ReadLine()) != null)
+            {
+                Santaemail.Add(new SantaEmail()
+                {
+                    Secretemail = line,
+                    Name = Santafile.ReadLine(),
+                    Secretsantee = Santafile.ReadLine()
+                });
+
+            }
+
+            System.IO.StreamReader Wishfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt");
+            while ((line = Wishfile.ReadLine()) != null)
+            {
+                Wishlist.Add(new SantaGift()
+                {
+                    name = line,
+                    location = Wishfile.ReadLine(),
+                    Pricelimit = Wishfile.ReadLine(),
+                    Listfile = Wishfile.ReadLine(),
+                    Giftcards = Wishfile.ReadLine(),
+                    Santaemail = Wishfile.ReadLine()
+                });
+
+            }
+            Wishfile.Close();
+            
+            
+            //int limit = Santaemail.Count;
+            //MessageBox.Show(Santaemail[0].Secretsantee, Santaemail[2].Secretsantee);
+            //MessageBox.Show(limit.ToString());
+            Fillselection(Wishlist);
         }
     }
 }
