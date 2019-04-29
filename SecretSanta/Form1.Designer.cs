@@ -61,10 +61,16 @@
             this.kgiftnum = new System.Windows.Forms.TextBox();
             this.kgifts = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Fnum = new System.Windows.Forms.TextBox();
+            this.Fgifts = new System.Windows.Forms.TextBox();
             this.kidsbox = new System.Windows.Forms.TextBox();
+            this.Folkbox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.santatab.SuspendLayout();
             this.santatab1.SuspendLayout();
             this.santatab2.SuspendLayout();
@@ -354,6 +360,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.kidsbox);
             this.tabPage1.Controls.Add(this.kgiftnum);
             this.tabPage1.Controls.Add(this.kgifts);
@@ -381,9 +390,12 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.comboBox2);
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.label15);
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.Folkbox);
+            this.tabPage2.Controls.Add(this.Fnum);
+            this.tabPage2.Controls.Add(this.Fgifts);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Size = new System.Drawing.Size(556, 374);
@@ -391,34 +403,87 @@
             this.tabPage2.Text = "Folks";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // Fnum
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 189);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(236, 20);
-            this.textBox3.TabIndex = 5;
+            this.Fnum.Location = new System.Drawing.Point(144, 189);
+            this.Fnum.Name = "Fnum";
+            this.Fnum.Size = new System.Drawing.Size(236, 20);
+            this.Fnum.TabIndex = 5;
             // 
-            // textBox4
+            // Fgifts
             // 
-            this.textBox4.Location = new System.Drawing.Point(144, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(236, 20);
-            this.textBox4.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(144, 75);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(236, 21);
-            this.comboBox2.TabIndex = 3;
+            this.Fgifts.Location = new System.Drawing.Point(144, 136);
+            this.Fgifts.Name = "Fgifts";
+            this.Fgifts.Size = new System.Drawing.Size(236, 20);
+            this.Fgifts.TabIndex = 4;
             // 
             // kidsbox
             // 
-            this.kidsbox.Location = new System.Drawing.Point(112, 59);
+            this.kidsbox.Location = new System.Drawing.Point(121, 57);
             this.kidsbox.Name = "kidsbox";
-            this.kidsbox.Size = new System.Drawing.Size(245, 20);
+            this.kidsbox.Size = new System.Drawing.Size(236, 20);
             this.kidsbox.TabIndex = 3;
+            // 
+            // Folkbox
+            // 
+            this.Folkbox.Location = new System.Drawing.Point(144, 84);
+            this.Folkbox.Name = "Folkbox";
+            this.Folkbox.Size = new System.Drawing.Size(236, 20);
+            this.Folkbox.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(121, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Kid Name";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(121, 99);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(28, 13);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Gifts";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(121, 157);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Number of Gifts";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(141, 173);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(80, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Number of Gifts";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(141, 120);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(28, 13);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Gifts";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(144, 65);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(102, 13);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Grandparents Name";
             // 
             // Santa
             // 
@@ -477,10 +542,16 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox kgiftnum;
         private System.Windows.Forms.TextBox kgifts;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox Fnum;
+        private System.Windows.Forms.TextBox Fgifts;
         private System.Windows.Forms.TextBox kidsbox;
+        private System.Windows.Forms.TextBox Folkbox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }
 

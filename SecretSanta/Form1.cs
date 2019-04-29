@@ -21,46 +21,11 @@ namespace SecretSanta
             InitializeComponent();
 
 
-            //string line;
-            //List<SantaEmail> Santaemail = new List<SantaEmail>();
-            //SantaEmail Emails = new SantaEmail();
-
-            //System.IO.StreamReader Santafile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\secretsanta.txt");
-            //while ((line = Santafile.ReadLine()) != null)
-            //{
-            //    Santaemail.Add(new SantaEmail()
-            //    {
-            //        Secretemail = line,
-            //        Name = line,
-            //        Secretsantee = line
-            //    });
-
-
-            //}
-            //MessageBox.Show(Santaemail[1].Name);
+           
 
         }
 
-        public void Main()
-        {
-            string line;
-            List<SantaEmail> Santaemail = new List<SantaEmail>();
-            SantaEmail Emails = new SantaEmail();
-
-            System.IO.StreamReader Santafile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta");
-            while ((line = Santafile.ReadLine()) != null)
-            {
-                Santaemail.Add(new SantaEmail()
-                {
-                    Secretemail = line,
-                    Name = line,
-                    Secretsantee = line
-                });
-
-              
-            }
-            MessageBox.Show("test");
-        }
+        
 
         private void Emails_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -104,7 +69,7 @@ namespace SecretSanta
 
             public int Giftnumber (string Gifts )
             {
-                int Giftnum = 0;
+                int Giftnum = 1;
                 
                 for (int b = 0; b < Gifts.Length; b++)
                 {
@@ -113,6 +78,8 @@ namespace SecretSanta
                         Giftnum++;
                     }
                 }
+                
+                
                 return Giftnum;
             }
             
@@ -131,12 +98,12 @@ namespace SecretSanta
         public void Kids_tab()
         {
             Kids kid = new Kids();
-            string line;
+         
             System.IO.StreamReader kidfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\kids.txt");
-            
-            
-                kid.Name = line;
-                kid.Gifts = kidfile.ReadLine();
+
+
+            kid.Name = kidfile.ReadLine();
+            kid.Gifts = kidfile.ReadLine();
             
 
             kidsbox.Text = kid.Name;
@@ -145,9 +112,28 @@ namespace SecretSanta
             kgiftnum.Text = a.ToString();
 
         }
+
+        public void Folkstab()
+        {
+            Folks folks = new Folks();
+
+            System.IO.StreamReader folkfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\Folks.txt");
+
+
+            folks.Name = folkfile.ReadLine();
+            folks.Gifts = folkfile.ReadLine();
+
+
+            Folkbox.Text = folks.Name;
+            Fgifts.Text = folks.Gifts;
+            int a = folks.Giftnumber(folks.Gifts);
+            Fnum.Text = a.ToString();
+
+        }
         private void Emailsend_Click(object sender, EventArgs e)
         {
-            MailMessage mail = new MailMessage("secretsantabos@gmail.com", "Cody.Ortega@trojans.dsu.edu", "coolstuff", "hello");
+            //test to see if ports and security is working
+            MailMessage mail = new MailMessage("secretsantabos@gmail.com", "Cody.Ortega@trojans.dsu.edu", "Test", "hello");
             SmtpClient client = new SmtpClient("smtp.gmail.com");
             client.Port = 587;
             client.Credentials = new System.Net.NetworkCredential("secretsantabos@gmail.com", "secretsanta123");
@@ -158,7 +144,7 @@ namespace SecretSanta
 
         private void Namebox_TextChanged(object sender, EventArgs e)
         {
-
+            //the code doesn't want me to delete these three
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -319,6 +305,7 @@ namespace SecretSanta
             List<SantaEmail> Santaemail = new List<SantaEmail>();
             List<SantaGift> Wishlist = new List<SantaGift>();
             Kids_tab();
+            Folkstab();
             string address = "C:\\Users\\BlooddSkullKing\\source\\repos\\school\\SecretSanta\\wishlists\\";
             string matt = address;
             SantaEmail Emails = new SantaEmail();
