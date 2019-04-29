@@ -57,6 +57,8 @@
             this.Attendancebox = new System.Windows.Forms.TextBox();
             this.Folksbox = new System.Windows.Forms.TextBox();
             this.schedulebutton = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.santatab.SuspendLayout();
             this.santatab1.SuspendLayout();
             this.santatab2.SuspendLayout();
@@ -85,6 +87,8 @@
             // 
             this.santatab.Controls.Add(this.santatab1);
             this.santatab.Controls.Add(this.santatab2);
+            this.santatab.Controls.Add(this.tabPage1);
+            this.santatab.Controls.Add(this.tabPage2);
             this.santatab.Location = new System.Drawing.Point(12, 12);
             this.santatab.Name = "santatab";
             this.santatab.SelectedIndex = 0;
@@ -340,6 +344,25 @@
             this.schedulebutton.UseVisualStyleBackColor = true;
             this.schedulebutton.Click += new System.EventHandler(this.schedulebutton_Click);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(556, 374);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Kids";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(556, 374);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "Folks";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Santa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,6 +412,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
