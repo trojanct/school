@@ -133,11 +133,11 @@ namespace SecretSanta
             Kids kid = new Kids();
             string line;
             System.IO.StreamReader kidfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\kids.txt");
-            while ((line = kidfile.ReadLine()) != null)
-            {
+            
+            
                 kid.Name = line;
                 kid.Gifts = kidfile.ReadLine();
-            }
+            
 
             kidsbox.Text = kid.Name;
             kgifts.Text = kid.Gifts;
