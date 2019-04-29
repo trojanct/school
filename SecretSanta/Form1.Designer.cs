@@ -32,36 +32,44 @@
             this.addemail = new System.Windows.Forms.Button();
             this.santatab = new System.Windows.Forms.TabControl();
             this.santatab1 = new System.Windows.Forms.TabPage();
+            this.Secretb = new System.Windows.Forms.Button();
+            this.EmailBox = new System.Windows.Forms.TextBox();
+            this.CardBox = new System.Windows.Forms.TextBox();
+            this.FileBox = new System.Windows.Forms.TextBox();
+            this.PriceBox = new System.Windows.Forms.TextBox();
+            this.LocationBox = new System.Windows.Forms.TextBox();
+            this.SanteeBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Emailsend = new System.Windows.Forms.Button();
-            this.santatab2 = new System.Windows.Forms.TabPage();
-            this.Placebox = new System.Windows.Forms.TextBox();
             this.details = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.SanteeBox = new System.Windows.Forms.TextBox();
-            this.LocationBox = new System.Windows.Forms.TextBox();
-            this.FileBox = new System.Windows.Forms.TextBox();
-            this.PriceBox = new System.Windows.Forms.TextBox();
-            this.EmailBox = new System.Windows.Forms.TextBox();
-            this.CardBox = new System.Windows.Forms.TextBox();
-            this.Secretb = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Timebox = new System.Windows.Forms.TextBox();
-            this.Attendancebox = new System.Windows.Forms.TextBox();
-            this.Folksbox = new System.Windows.Forms.TextBox();
+            this.santatab2 = new System.Windows.Forms.TabPage();
             this.schedulebutton = new System.Windows.Forms.Button();
+            this.Folksbox = new System.Windows.Forms.TextBox();
+            this.Attendancebox = new System.Windows.Forms.TextBox();
+            this.Timebox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Placebox = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.kgiftnum = new System.Windows.Forms.TextBox();
+            this.kgifts = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.kidsbox = new System.Windows.Forms.TextBox();
             this.santatab.SuspendLayout();
             this.santatab1.SuspendLayout();
             this.santatab2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Emailsname
@@ -122,6 +130,95 @@
             this.santatab1.Text = "Santa";
             this.santatab1.UseVisualStyleBackColor = true;
             // 
+            // Secretb
+            // 
+            this.Secretb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Secretb.Location = new System.Drawing.Point(24, 299);
+            this.Secretb.Name = "Secretb";
+            this.Secretb.Size = new System.Drawing.Size(265, 53);
+            this.Secretb.TabIndex = 16;
+            this.Secretb.Text = "Secret Santa Button";
+            this.Secretb.UseVisualStyleBackColor = true;
+            this.Secretb.Click += new System.EventHandler(this.Secretb_Click);
+            // 
+            // EmailBox
+            // 
+            this.EmailBox.Location = new System.Drawing.Point(387, 228);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(149, 20);
+            this.EmailBox.TabIndex = 15;
+            // 
+            // CardBox
+            // 
+            this.CardBox.Location = new System.Drawing.Point(387, 199);
+            this.CardBox.Name = "CardBox";
+            this.CardBox.Size = new System.Drawing.Size(149, 20);
+            this.CardBox.TabIndex = 14;
+            // 
+            // FileBox
+            // 
+            this.FileBox.Location = new System.Drawing.Point(387, 173);
+            this.FileBox.Name = "FileBox";
+            this.FileBox.Size = new System.Drawing.Size(149, 20);
+            this.FileBox.TabIndex = 13;
+            // 
+            // PriceBox
+            // 
+            this.PriceBox.Location = new System.Drawing.Point(387, 144);
+            this.PriceBox.Name = "PriceBox";
+            this.PriceBox.Size = new System.Drawing.Size(149, 20);
+            this.PriceBox.TabIndex = 12;
+            // 
+            // LocationBox
+            // 
+            this.LocationBox.Location = new System.Drawing.Point(387, 118);
+            this.LocationBox.Name = "LocationBox";
+            this.LocationBox.Size = new System.Drawing.Size(149, 20);
+            this.LocationBox.TabIndex = 11;
+            // 
+            // SanteeBox
+            // 
+            this.SanteeBox.Location = new System.Drawing.Point(387, 89);
+            this.SanteeBox.Name = "SanteeBox";
+            this.SanteeBox.Size = new System.Drawing.Size(149, 20);
+            this.SanteeBox.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(317, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Santa Email";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(317, 202);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Gift Cards";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(317, 176);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "List File";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(317, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Price Limit";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -151,6 +248,15 @@
             this.Emailsend.UseVisualStyleBackColor = true;
             this.Emailsend.Click += new System.EventHandler(this.Emailsend_Click);
             // 
+            // details
+            // 
+            this.details.Location = new System.Drawing.Point(24, 81);
+            this.details.Name = "details";
+            this.details.Size = new System.Drawing.Size(265, 180);
+            this.details.TabIndex = 1;
+            this.details.Text = "";
+            this.details.TextChanged += new System.EventHandler(this.details_TextChanged);
+            // 
             // santatab2
             // 
             this.santatab2.Controls.Add(this.schedulebutton);
@@ -170,169 +276,6 @@
             this.santatab2.Text = "christmas";
             this.santatab2.UseVisualStyleBackColor = true;
             // 
-            // Placebox
-            // 
-            this.Placebox.Location = new System.Drawing.Point(20, 58);
-            this.Placebox.Name = "Placebox";
-            this.Placebox.Size = new System.Drawing.Size(363, 20);
-            this.Placebox.TabIndex = 0;
-            this.Placebox.TextChanged += new System.EventHandler(this.Namebox_TextChanged);
-            // 
-            // details
-            // 
-            this.details.Location = new System.Drawing.Point(24, 81);
-            this.details.Name = "details";
-            this.details.Size = new System.Drawing.Size(265, 180);
-            this.details.TabIndex = 1;
-            this.details.Text = "";
-            this.details.TextChanged += new System.EventHandler(this.details_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(317, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Price Limit";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(317, 176);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "List File";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(317, 202);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Gift Cards";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(317, 231);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Santa Email";
-            // 
-            // SanteeBox
-            // 
-            this.SanteeBox.Location = new System.Drawing.Point(387, 89);
-            this.SanteeBox.Name = "SanteeBox";
-            this.SanteeBox.Size = new System.Drawing.Size(149, 20);
-            this.SanteeBox.TabIndex = 10;
-            // 
-            // LocationBox
-            // 
-            this.LocationBox.Location = new System.Drawing.Point(387, 118);
-            this.LocationBox.Name = "LocationBox";
-            this.LocationBox.Size = new System.Drawing.Size(149, 20);
-            this.LocationBox.TabIndex = 11;
-            // 
-            // FileBox
-            // 
-            this.FileBox.Location = new System.Drawing.Point(387, 173);
-            this.FileBox.Name = "FileBox";
-            this.FileBox.Size = new System.Drawing.Size(149, 20);
-            this.FileBox.TabIndex = 13;
-            // 
-            // PriceBox
-            // 
-            this.PriceBox.Location = new System.Drawing.Point(387, 144);
-            this.PriceBox.Name = "PriceBox";
-            this.PriceBox.Size = new System.Drawing.Size(149, 20);
-            this.PriceBox.TabIndex = 12;
-            // 
-            // EmailBox
-            // 
-            this.EmailBox.Location = new System.Drawing.Point(387, 228);
-            this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(149, 20);
-            this.EmailBox.TabIndex = 15;
-            // 
-            // CardBox
-            // 
-            this.CardBox.Location = new System.Drawing.Point(387, 199);
-            this.CardBox.Name = "CardBox";
-            this.CardBox.Size = new System.Drawing.Size(149, 20);
-            this.CardBox.TabIndex = 14;
-            // 
-            // Secretb
-            // 
-            this.Secretb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Secretb.Location = new System.Drawing.Point(24, 299);
-            this.Secretb.Name = "Secretb";
-            this.Secretb.Size = new System.Drawing.Size(265, 53);
-            this.Secretb.TabIndex = 16;
-            this.Secretb.Text = "Secret Santa Button";
-            this.Secretb.UseVisualStyleBackColor = true;
-            this.Secretb.Click += new System.EventHandler(this.Secretb_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 39);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Location";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 98);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Time";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 158);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Family Attending";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 211);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Who is bringing the folks";
-            // 
-            // Timebox
-            // 
-            this.Timebox.Location = new System.Drawing.Point(20, 114);
-            this.Timebox.Name = "Timebox";
-            this.Timebox.Size = new System.Drawing.Size(363, 20);
-            this.Timebox.TabIndex = 5;
-            // 
-            // Attendancebox
-            // 
-            this.Attendancebox.Location = new System.Drawing.Point(20, 174);
-            this.Attendancebox.Name = "Attendancebox";
-            this.Attendancebox.Size = new System.Drawing.Size(363, 20);
-            this.Attendancebox.TabIndex = 6;
-            // 
-            // Folksbox
-            // 
-            this.Folksbox.Location = new System.Drawing.Point(20, 227);
-            this.Folksbox.Name = "Folksbox";
-            this.Folksbox.Size = new System.Drawing.Size(363, 20);
-            this.Folksbox.TabIndex = 7;
-            // 
             // schedulebutton
             // 
             this.schedulebutton.Font = new System.Drawing.Font("Sitka Heading", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,8 +287,76 @@
             this.schedulebutton.UseVisualStyleBackColor = true;
             this.schedulebutton.Click += new System.EventHandler(this.schedulebutton_Click);
             // 
+            // Folksbox
+            // 
+            this.Folksbox.Location = new System.Drawing.Point(20, 227);
+            this.Folksbox.Name = "Folksbox";
+            this.Folksbox.Size = new System.Drawing.Size(363, 20);
+            this.Folksbox.TabIndex = 7;
+            // 
+            // Attendancebox
+            // 
+            this.Attendancebox.Location = new System.Drawing.Point(20, 174);
+            this.Attendancebox.Name = "Attendancebox";
+            this.Attendancebox.Size = new System.Drawing.Size(363, 20);
+            this.Attendancebox.TabIndex = 6;
+            // 
+            // Timebox
+            // 
+            this.Timebox.Location = new System.Drawing.Point(20, 114);
+            this.Timebox.Name = "Timebox";
+            this.Timebox.Size = new System.Drawing.Size(363, 20);
+            this.Timebox.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 211);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Who is bringing the folks";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 158);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Family Attending";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Time";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Location";
+            // 
+            // Placebox
+            // 
+            this.Placebox.Location = new System.Drawing.Point(20, 58);
+            this.Placebox.Name = "Placebox";
+            this.Placebox.Size = new System.Drawing.Size(363, 20);
+            this.Placebox.TabIndex = 0;
+            this.Placebox.TextChanged += new System.EventHandler(this.Namebox_TextChanged);
+            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.kidsbox);
+            this.tabPage1.Controls.Add(this.kgiftnum);
+            this.tabPage1.Controls.Add(this.kgifts);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -354,14 +365,60 @@
             this.tabPage1.Text = "Kids";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // kgiftnum
+            // 
+            this.kgiftnum.Location = new System.Drawing.Point(121, 176);
+            this.kgiftnum.Name = "kgiftnum";
+            this.kgiftnum.Size = new System.Drawing.Size(236, 20);
+            this.kgiftnum.TabIndex = 2;
+            // 
+            // kgifts
+            // 
+            this.kgifts.Location = new System.Drawing.Point(121, 118);
+            this.kgifts.Name = "kgifts";
+            this.kgifts.Size = new System.Drawing.Size(236, 20);
+            this.kgifts.TabIndex = 1;
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Size = new System.Drawing.Size(556, 374);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Folks";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(144, 189);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(236, 20);
+            this.textBox3.TabIndex = 5;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(144, 131);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(236, 20);
+            this.textBox4.TabIndex = 4;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(144, 75);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(236, 21);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // kidsbox
+            // 
+            this.kidsbox.Location = new System.Drawing.Point(112, 59);
+            this.kidsbox.Name = "kidsbox";
+            this.kidsbox.Size = new System.Drawing.Size(245, 20);
+            this.kidsbox.TabIndex = 3;
             // 
             // Santa
             // 
@@ -377,6 +434,10 @@
             this.santatab1.PerformLayout();
             this.santatab2.ResumeLayout(false);
             this.santatab2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -414,6 +475,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox kgiftnum;
+        private System.Windows.Forms.TextBox kgifts;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox kidsbox;
     }
 }
 

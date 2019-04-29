@@ -86,24 +86,7 @@ namespace SecretSanta
             public string Giftcards { get; set; }
             public string Santaemail { get; set; }
 
-            //void fillclass(List<SantaGift> Wishname)
-            //{
-            //    string line;
-
-            //    System.IO.StreamReader Wishfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt");
-            //    while ((line = Wishfile.ReadLine()) != null)
-            //    {
-            //        Wishname.Add(new SantaGift()
-            //        {
-            //            name = line,
-            //            location = Wishfile.ReadLine(),
-            //            Pricelimit = Wishfile.ReadLine(),
-            //            Listfile = Wishfile.ReadLine(),
-            //            Giftcards = Wishfile.ReadLine(),
-            //            Santaemail = Wishfile.ReadLine()
-            //        });
-            //    }
-            //}
+           
         }
         public class Christmaslocation
         {
@@ -112,69 +95,56 @@ namespace SecretSanta
             public string Familyattendance { get; set; }
             public string GrandmaAttender { get; set; }
 
-
-            private void schedulebutton_Click(object sender, EventArgs e)
-            {
-                Christmaslocation Clocation = new Christmaslocation()
-                {
-                    Location = Placebox.Text,
-                    Time = Timebox.Text,
-                    Familyattendance = Attendancebox.Text,
-                    GrandmaAttender = Folksbox.Text
-
-                };
-                printschedule(Clocation);
-
-
-
-            }
-            private void printschedule(Christmaslocation schedulelist)
-            {
-                string line;
-                List<SantaGift> Slist = new List<SantaGift>();
-
-                System.IO.StreamReader Wishfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt");
-                while ((line = Wishfile.ReadLine()) != null)
-                {
-
-                    Slist.Add(new SantaGift()
-                    {
-                        name = line,
-                        location = Wishfile.ReadLine(),
-                        Pricelimit = Wishfile.ReadLine(),
-                        Listfile = Wishfile.ReadLine(),
-                        Giftcards = Wishfile.ReadLine(),
-                        Santaemail = Wishfile.ReadLine()
-                    });
-
-                }
-                Wishfile.Close();
-
-
-
-                for (int e = 0; e < Slist.Count; e++)
-                {
-                    MailMessage mail = new MailMessage("secretsantabos@gmail.com", Slist[e].Santaemail, "Christmas Schedule", "The location is at" + schedulelist.Location + "\n" + schedulelist.Time + "\n" + schedulelist.Familyattendance + "\n" + schedulelist.GrandmaAttender);
-                    SmtpClient client = new SmtpClient("smtp.gmail.com");
-                    client.Port = 587;
-                    client.Credentials = new System.Net.NetworkCredential("secretsantabos@gmail.com", "secretsanta123");
-                    client.EnableSsl = true;
-                    client.Send(mail);
-                }
-            }
-
         }
         public class NonsecretSanta
         {
             public string Name { get; set; }
             public string Gifts { get; set; }
+
+
+            public int Giftnumber (string Gifts )
+            {
+                int Giftnum = 0;
+                
+                for (int b = 0; b < Gifts.Length; b++)
+                {
+                    if (Gifts[b] == ' ' )
+                    {
+                        Giftnum++;
+                    }
+                }
+                return Giftnum;
+            }
+            
+
         }
-        public class Nonsantagift
+        public class Kids : NonsecretSanta
         {
-            List<string> Giftideas = new List<string>();
+
+        }
+        public class Folks : NonsecretSanta
+        {
 
         }
 
+
+        public void Kids_tab()
+        {
+            Kids kid = new Kids();
+            string line;
+            System.IO.StreamReader kidfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\kids.txt");
+            while ((line = kidfile.ReadLine()) != null)
+            {
+                kid.Name = line;
+                kid.Gifts = kidfile.ReadLine();
+            }
+
+            kidsbox.Text = kid.Name;
+            kgifts.Text = kid.Gifts;
+            int a = kid.Giftnumber(kid.Gifts);
+            kgiftnum.Text = a.ToString();
+
+        }
         private void Emailsend_Click(object sender, EventArgs e)
         {
             MailMessage mail = new MailMessage("secretsantabos@gmail.com", "Cody.Ortega@trojans.dsu.edu", "coolstuff", "hello");
@@ -348,7 +318,7 @@ namespace SecretSanta
             string line;
             List<SantaEmail> Santaemail = new List<SantaEmail>();
             List<SantaGift> Wishlist = new List<SantaGift>();
-
+            Kids_tab();
             string address = "C:\\Users\\BlooddSkullKing\\source\\repos\\school\\SecretSanta\\wishlists\\";
             string matt = address;
             SantaEmail Emails = new SantaEmail();
@@ -429,54 +399,54 @@ namespace SecretSanta
             
         }
 
-        //private void schedulebutton_Click(object sender, EventArgs e)
-        //{
-        //    Christmaslocation Clocation = new Christmaslocation()
-        //    {
-        //        Location = Placebox.Text,
-        //        Time = Timebox.Text,
-        //        Familyattendance = Attendancebox.Text,
-        //        GrandmaAttender = Folksbox.Text
+        private void schedulebutton_Click(object sender, EventArgs e)
+        {
+            Christmaslocation Clocation = new Christmaslocation()
+            {
+                Location = Placebox.Text,
+                Time = Timebox.Text,
+                Familyattendance = Attendancebox.Text,
+                GrandmaAttender = Folksbox.Text
 
-        //    };
-        //    printschedule(Clocation);
+            };
+            printschedule(Clocation);
             
 
          
-        //}
-        //private void printschedule( Christmaslocation schedulelist)
-        //{
-        //    string line;
-        //    List<SantaGift> Slist = new List<SantaGift>();
+        }
+        private void printschedule( Christmaslocation schedulelist)
+        {
+            string line;
+            List<SantaGift> Slist = new List<SantaGift>();
            
-        //    System.IO.StreamReader Wishfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt");
-        //    while ((line = Wishfile.ReadLine()) != null)
-        //    {
+            System.IO.StreamReader Wishfile = new System.IO.StreamReader(@"C:\Users\BlooddSkullKing\source\repos\school\SecretSanta\wishlist.txt");
+            while ((line = Wishfile.ReadLine()) != null)
+            {
 
-        //        Slist.Add(new SantaGift()
-        //        {
-        //            name = line,
-        //            location = Wishfile.ReadLine(),
-        //            Pricelimit = Wishfile.ReadLine(),
-        //            Listfile = Wishfile.ReadLine(),
-        //            Giftcards = Wishfile.ReadLine(),
-        //            Santaemail = Wishfile.ReadLine()
-        //        });
+                Slist.Add(new SantaGift()
+                {
+                    name = line,
+                    location = Wishfile.ReadLine(),
+                    Pricelimit = Wishfile.ReadLine(),
+                    Listfile = Wishfile.ReadLine(),
+                    Giftcards = Wishfile.ReadLine(),
+                    Santaemail = Wishfile.ReadLine()
+                });
 
-        //    }
-        //    Wishfile.Close();
+            }
+            Wishfile.Close();
 
             
 
-        //    for (int e = 0; e < Slist.Count; e++)
-        //    {
-        //        MailMessage mail = new MailMessage("secretsantabos@gmail.com", Slist[e].Santaemail, "Christmas Schedule","The location is at" + schedulelist.Location + "\n" +schedulelist.Time + "\n" + schedulelist.Familyattendance + "\n" + schedulelist.GrandmaAttender);
-        //        SmtpClient client = new SmtpClient("smtp.gmail.com");
-        //        client.Port = 587;
-        //        client.Credentials = new System.Net.NetworkCredential("secretsantabos@gmail.com", "secretsanta123");
-        //        client.EnableSsl = true;
-        //        client.Send(mail);
-        //    }
-        //}
+            for (int e = 0; e < Slist.Count; e++)
+            {
+                MailMessage mail = new MailMessage("secretsantabos@gmail.com", Slist[e].Santaemail, "Christmas Schedule","The location is at" + schedulelist.Location + "\n" +schedulelist.Time + "\n" + schedulelist.Familyattendance + "\n" + schedulelist.GrandmaAttender);
+                SmtpClient client = new SmtpClient("smtp.gmail.com");
+                client.Port = 587;
+                client.Credentials = new System.Net.NetworkCredential("secretsantabos@gmail.com", "secretsanta123");
+                client.EnableSsl = true;
+                client.Send(mail);
+            }
+        }
     }
 }
