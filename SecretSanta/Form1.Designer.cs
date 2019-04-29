@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Emailsend = new System.Windows.Forms.Button();
             this.santatab2 = new System.Windows.Forms.TabPage();
-            this.Namebox = new System.Windows.Forms.TextBox();
+            this.Placebox = new System.Windows.Forms.TextBox();
             this.details = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +49,14 @@
             this.EmailBox = new System.Windows.Forms.TextBox();
             this.CardBox = new System.Windows.Forms.TextBox();
             this.Secretb = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Timebox = new System.Windows.Forms.TextBox();
+            this.Attendancebox = new System.Windows.Forms.TextBox();
+            this.Folksbox = new System.Windows.Forms.TextBox();
+            this.schedulebutton = new System.Windows.Forms.Button();
             this.santatab.SuspendLayout();
             this.santatab1.SuspendLayout();
             this.santatab2.SuspendLayout();
@@ -141,7 +149,15 @@
             // 
             // santatab2
             // 
-            this.santatab2.Controls.Add(this.Namebox);
+            this.santatab2.Controls.Add(this.schedulebutton);
+            this.santatab2.Controls.Add(this.Folksbox);
+            this.santatab2.Controls.Add(this.Attendancebox);
+            this.santatab2.Controls.Add(this.Timebox);
+            this.santatab2.Controls.Add(this.label10);
+            this.santatab2.Controls.Add(this.label9);
+            this.santatab2.Controls.Add(this.label8);
+            this.santatab2.Controls.Add(this.label7);
+            this.santatab2.Controls.Add(this.Placebox);
             this.santatab2.Location = new System.Drawing.Point(4, 22);
             this.santatab2.Name = "santatab2";
             this.santatab2.Padding = new System.Windows.Forms.Padding(3);
@@ -150,13 +166,13 @@
             this.santatab2.Text = "christmas";
             this.santatab2.UseVisualStyleBackColor = true;
             // 
-            // Namebox
+            // Placebox
             // 
-            this.Namebox.Location = new System.Drawing.Point(14, 49);
-            this.Namebox.Name = "Namebox";
-            this.Namebox.Size = new System.Drawing.Size(152, 20);
-            this.Namebox.TabIndex = 0;
-            this.Namebox.TextChanged += new System.EventHandler(this.Namebox_TextChanged);
+            this.Placebox.Location = new System.Drawing.Point(20, 58);
+            this.Placebox.Name = "Placebox";
+            this.Placebox.Size = new System.Drawing.Size(363, 20);
+            this.Placebox.TabIndex = 0;
+            this.Placebox.TextChanged += new System.EventHandler(this.Namebox_TextChanged);
             // 
             // details
             // 
@@ -256,6 +272,74 @@
             this.Secretb.UseVisualStyleBackColor = true;
             this.Secretb.Click += new System.EventHandler(this.Secretb_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Location";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Time";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 158);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Family Attending";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 211);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Who is bringing the folks";
+            // 
+            // Timebox
+            // 
+            this.Timebox.Location = new System.Drawing.Point(20, 114);
+            this.Timebox.Name = "Timebox";
+            this.Timebox.Size = new System.Drawing.Size(363, 20);
+            this.Timebox.TabIndex = 5;
+            // 
+            // Attendancebox
+            // 
+            this.Attendancebox.Location = new System.Drawing.Point(20, 174);
+            this.Attendancebox.Name = "Attendancebox";
+            this.Attendancebox.Size = new System.Drawing.Size(363, 20);
+            this.Attendancebox.TabIndex = 6;
+            // 
+            // Folksbox
+            // 
+            this.Folksbox.Location = new System.Drawing.Point(20, 227);
+            this.Folksbox.Name = "Folksbox";
+            this.Folksbox.Size = new System.Drawing.Size(363, 20);
+            this.Folksbox.TabIndex = 7;
+            // 
+            // schedulebutton
+            // 
+            this.schedulebutton.Font = new System.Drawing.Font("Sitka Heading", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.schedulebutton.Location = new System.Drawing.Point(20, 273);
+            this.schedulebutton.Name = "schedulebutton";
+            this.schedulebutton.Size = new System.Drawing.Size(180, 36);
+            this.schedulebutton.TabIndex = 8;
+            this.schedulebutton.Text = "Send Schedule";
+            this.schedulebutton.UseVisualStyleBackColor = true;
+            this.schedulebutton.Click += new System.EventHandler(this.schedulebutton_Click);
+            // 
             // Santa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,7 +366,7 @@
         private System.Windows.Forms.TabPage santatab1;
         private System.Windows.Forms.TabPage santatab2;
         private System.Windows.Forms.Button Emailsend;
-        private System.Windows.Forms.TextBox Namebox;
+        private System.Windows.Forms.TextBox Placebox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox details;
@@ -297,6 +381,14 @@
         private System.Windows.Forms.TextBox SanteeBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Secretb;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button schedulebutton;
+        private System.Windows.Forms.TextBox Folksbox;
+        private System.Windows.Forms.TextBox Attendancebox;
+        private System.Windows.Forms.TextBox Timebox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }
 
